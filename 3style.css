@@ -1,0 +1,325 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(30, 36, 63, 0.7), rgba(55, 64, 102, 0.7)), url(images/hg.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*  */
+
+.header nav a img {
+    width: 100px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+    position: absolute;
+    top: 10px; /* Distance from the top */
+    left: 10px; /* Distance from the left */
+}
+
+.nav-links{
+    flex: 1;
+    text-align: right;
+
+}
+
+
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+
+
+.nav-links ul li a{
+    color: rgb(217, 211, 25);
+    text-decoration: none;
+    font-size: 19px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif ;
+}
+
+
+.nav-links ul li ::after{
+    content: '';
+    width: 0%;
+    height: 4px;
+    background: #f44336;
+    display: block;
+    margin:auto;
+
+}
+.nav-links ul li :hover::after{
+    width: 100%;
+    transition: 0.2s;
+
+}
+
+.text_box{
+
+    /* font-size: 18px; */
+    width: 90%;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    
+}
+
+.text_box h1{
+    font-size: 50px;
+
+}
+
+.text_box p{
+    margin: 10px 0 40px;
+    font-size: 19px;
+    color: white;
+}
+
+
+.button_vi{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 14px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.button_vi:hover{
+    border: 1 px solid #f44336;
+    background: #f44336;
+    transition: 0.18s;
+}
+
+
+/* ----/* course styling  */
+
+
+
+.course{
+    width: 80%;
+    margin:auto;
+    text-align: center;
+    padding-top: 100px;
+
+}
+
+h1{
+    font-size: 36px;
+    font-weight: 600;
+
+}
+
+p{
+    color:#777;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size:19px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+
+}
+
+.row{
+    margin-top: 5%;
+    display: flex;
+    gap: 20px;
+
+}
+
+.course-col{
+    flex-basis:31% ;
+    background: #fff8c3 ;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.course-col:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+
+}
+
+
+
+
+
+
+
+/* Campus styling */
+
+/* Main Row for Images */
+
+.campus{
+
+
+    width: 80%;
+    margin:auto;
+    text-align: center;
+    padding-top: 100px;
+
+
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    justify-content: space-around;
+    justify-items: center; /* Centers items within their grid area */
+}
+
+/* Individual Campus Columns */
+.campus-col {
+    position: relative; /* Allows layering for hover effects */
+    border-radius: 10px;
+    overflow: hidden; /* Ensures content stays within bounds */
+    max-width: 300px; /* Restricts maximum width */
+}
+
+/* Images Styling */
+.campus-col img {
+    width: 100%; /* Full width of the container */
+    height: 300px; /* Fixed height for all images */
+    object-fit: cover; /* Maintains aspect ratio and fills the container */
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* Layer (Hover Effect) */
+.layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    transition: 0.2s; /* Smooth transition */
+}
+
+.layer:hover {
+    background: rgba(243, 78, 78, 0.511); /* Semi-transparent overlay on hover */
+    
+}
+
+/* Layer Text Styling */
+.layer h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transition: 0.5s; /* Fade-in effect */
+}
+
+.layer:hover h3 {
+    opacity: 1;
+    
+}
+
+
+/* -------facilities */
+
+.facilities{
+    width: 80%;
+    margin:auto;
+    text-align: center;
+    padding-top: 100px;
+
+
+}
+
+
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    justify-content: space-around;
+    justify-items: center; /* Centers items within their grid area */
+}
+
+/* Individual fac Columns */
+.fac-col {
+    position: relative; /* Allows layering for hover effects */
+    border-radius: 10px;
+    overflow: hidden; /* Ensures content stays within bounds */
+    max-width: 300px; /* Restricts maximum width */
+    transition: 0.3s;
+}
+
+/* Images Styling */
+.fac-col img {
+    width: 100%; /* Full width of the container */
+    height: 300px; /* Fixed height for all images */
+    object-fit: cover; /* Maintains aspect ratio and fills the container */
+    border-radius: 10px; /* Rounded corners */
+}
+
+
+.fac-col:hover{
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.31);
+
+}
+
+
+
+/* -------------testimonials */
+
+
+.testimonials{
+    width: 80%;
+    margin:auto;
+    text-align: center;
+    padding-top: 100px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
